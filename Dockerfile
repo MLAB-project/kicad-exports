@@ -15,7 +15,6 @@ RUN chmod +x /entrypoint.sh
 
 ARG USER=user
 RUN useradd -ms /bin/bash $USER
-USER $USER
-WORKDIR /home/$USER
+WORKDIR $HOME
 
 ENTRYPOINT [ "/entrypoint.sh" ]
