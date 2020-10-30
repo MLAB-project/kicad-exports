@@ -1,5 +1,6 @@
-FROM setsoft/kicad_auto:nightly
+FROM mlabproject/kicad_auto:nightly
 LABEL MAINTAINER nerdyscout <nerdyscout@posteo.de>
+LABEL MAINTAINER Roman Dvořák <romandvorak@mlab.cz>
 LABEL Description="export various files from KiCad projects"
 LABEL VERSION="v2.2"
 
