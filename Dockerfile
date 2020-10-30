@@ -14,4 +14,10 @@ COPY config/*.kibot.yaml /opt/kibot/config/
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+RUN echo '' > ~/.bash_aliases
+RUN echo 'alias eeschema=eeschema-nightly' >> ~/.bash_aliases
+RUN echo 'alias pcbnew=pcbnew-nightly' >> ~/.bash_aliases
+RUN echo 'alias kicad=kicad-nightly' >> ~/.bash_aliases
+
 ENTRYPOINT [ "/entrypoint.sh" ]
